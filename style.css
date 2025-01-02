@@ -1,0 +1,184 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background: #f4f4f9;
+  }
+  
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar .clipping_properties {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    text-transform: capitalize;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #feb47b;
+  }
+  
+
+  .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+ 
+  section {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  section h2 {
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.8rem;
+  }
+  
+  section img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s, clip-path 0.3s;
+  }
+  
+  /* Clipping Shapes */
+  .clip_1 {
+    clip-path: inset(10% 10% 10% 10%); /* Rectangle */
+  }
+  
+  .clip_2 {
+    clip-path: circle(40% at 50% 50%); /* Circle */
+  }
+  
+  .clip_3 {
+    clip-path: ellipse(50% 40% at 50% 50%); /* Ellipse */
+  }
+  
+  .clip_4 {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Diamond */
+  }
+  
+  section img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    /* Navbar */
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      background: #333;
+      width: 150px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links li {
+      margin: 0.5rem 0;
+      text-align: center;
+    }
+  
+    /* Section Adjustments */
+    section {
+      padding: 1.5rem 1rem;
+    }
+  
+    section h2 {
+      font-size: 1.5rem;
+    }
+  
+    section img {
+      clip-path: inset(15%);
+    }
+  
+    .clip_1 {
+      clip-path: inset(15%); 
+    }
+  
+    .clip_2 {
+      clip-path: circle(35% at 50% 50%);
+    }
+  
+    .clip_3 {
+      clip-path: ellipse(40% 30% at 50% 50%);
+    }
+  
+    .clip_4 {
+      clip-path: polygon(50% 0%, 90% 50%, 50% 90%, 10% 50%);
+    }
+    /* Footer Styling */
+
+
+  }
+  .footer {
+    background-color: #f33535;
+    color: rgb(33, 31, 31);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer a {
+    color: #feb47b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    color: #a82302;
+}
+  
